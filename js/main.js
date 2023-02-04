@@ -54,7 +54,7 @@
     
 })(jQuery);
 
-var countDownDate = new Date("Jan 5, 2023 00:00:00").getTime();
+var countDownDate = new Date("Feb 9, 2023 00:00:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -67,7 +67,7 @@ var x = setInterval(function () {
   document.getElementById("hours").innerHTML = hours;
   document.getElementById("min").innerHTML = minutes;
   document.getElementById("sec").innerHTML = seconds;
-  if (distance < 0) {
+  if (distance <= 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
